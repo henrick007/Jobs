@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobs</title>
+
+    <style>
+body{
+    font-family: 'Times new roman', sans-serif;
+    background-image: linear-gradient(to right, rgb(67, 194, 60), rgb(0, 60, 0));
+}
+/* Estilização da class informacoes*/
+.informacoes{
+    font-size: 16px;
+}
+
+img{
+    width: 100px;
+    height: 90px;
+    border-radius: 10px;
+}
+
+/* Estilo de elementos que existem nas duas classes*/
+fieldset{
+    border: 3px solid black;
+}
+
+legend{
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 10px;
+}
+
+/* Estilização da classe formulario*/
+.inputUser{
+    background: #dedede;
+    border: 0;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+}
+
+
+/* Estilo do button do formulario*/
+#botao {
+    background-image: linear-gradient(to right,  rgb(0, 60, 0), rgb(57, 124, 44));
+    color: black;
+    font-size: 15px;
+    padding: 8px;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 200px;
+}
+    </style>
+
+</head>
+<body>
+    <section>
+        <div class="informacoes">
+            <fieldset>
+                <legend><b>Informações do Usuário</b></legend>
+                <img src="./assets/perfil.jpg" alt="Imagem de Perfil">
+                <p id="nome"><b>Nome:</b> <br> Gabriel Henrique Ferreira Alves</p>
+                <p id="idade"><b>Idade:</b> <br>21</p>
+                <p id="endereco"><b>Endereço:</b> <br>Av - A, Quadra - 17, Casa - 116, Lote - 30</p>
+                <p id="bairro"><b>Bairro:</b> <br>Altos do Parque 2, Cuiabá</p>
+                <p id="estado"><b>Estado:</b> <br>Mato Grosso - MT</p>
+                <p id="biografia"><b>Biografia:</b> <br>Me chamo Gabriel Henrique, tenho 21 anos,
+                    atualmente estou cursando o 5º semestre em Análise e Desenvolvimento de 
+                    Sistema na faculdade invest de ciência e tecnologia</p>
+            </fieldset>
+        </div>
+    </section>
+<br>
+    <section>
+        <fieldset>
+            <legend><b>Atualizar Informações</b></legend>
+            <br>
+            <div class="inputBox">
+                <form action="config.php" method="post">
+                    <label for="nome"><b>Nome:</b></label><br>
+                    <input type="text" name="nome" id="new_nome" class="inputUser" placeholder="Digite seu nome..." required><br><br>
+                    
+                    <label for="idade"><b>Idade:</b></label><br>
+                    <input type="number" name="idade" id="new_idade" class="inputUser" placeholder="Digite sua idade..." required><br><br>
+                    
+                    <label for="endereco"><b>Endereço:</b></label><br>
+                    <input type="text" name="endereco" id="new_endereco" class="inputUser" placeholder="Digite seu endereço..." required><br><br>                   
+                    
+                    <label for="bairro"><b>Bairro:</b></label><br>
+                    <input type="text" name="bairro" id="new_bairro" class="inputUser" placeholder="Digite seu bairro..." required><br><br>                   
+                    
+                    <label for="estado"><b>Estado:</b></label><br>
+                    <input type="text" name="estado" id="new_estado" class="inputUser" placeholder="Digite seu estado..." required><br><br>
+                   
+                    <label for="biografia"><b>Biografia:</b></label><br>
+                    <textarea id="new_biografia" rows="4" cols="50" class="inputUser" required></textarea><br><br>
+                    
+                    <button type="submit" id="botao" value="atualizar" onclick="atualizarInformacoes()"><b>Atualizar</b></button>
+                </form>
+            </div>
+        </fieldset>
+    </section>
+
+    <script src="/script.js"></script>
+</body>
+</html>
